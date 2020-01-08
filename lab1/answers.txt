@@ -1,0 +1,52 @@
+Answers
+1. github.com/j-liew
+
+2. 2.18.4
+
+3. 2.22.0
+
+4. they are using different versions of the requests library
+
+5.
+curl -i http://google.com/
+returns status code 301 Moved
+
+http://www.google.com/ must be visited to get the 200 status code
+
+6. 
+curl http://google.com/teapot
+returns status code 301 Moved
+
+which is the same code returned by curl -i http://google.com/teapot
+
+curl http://www.google.com/teapot
+returns status code 418 I'm a Teapot
+
+(as does curl -iL http://google.com/teapot after redirecting)
+
+7. 
+curl -i https://webdocs.cs.ualberta.ca/~hindle1/1.py
+
+OUTPUT:
+<H3>Form Contents:</H3>
+<P>No form fields.
+<DL>
+</DL>
+
+curl -i -X POST -d "X=Y" https://webdocs.cs.ualberta.ca/~hindle1/1.py
+
+OUTPUT:
+<H3>Form Contents:</H3>
+<DL>
+<DT>X: <i>&lt;type 'instance'&gt;</i>
+<DD>MiniFieldStorage('X', 'Y')
+</DL>
+
+The output of the second command stores and displays the values of the parameters sent to it via the POST request.  
+
+The POST method is useful for sending data to a server
+
+For example, lets say that a website has a form that asks a user for their email.  When the user types in their email and submits the form, they
+are likely sending a POST request to the server with a parameter "email" set to whatever they inputted.  The server can then store or do whatever with the email.
+
+8. https://raw.githubusercontent.com/j-liew/404-labs/master/lab1/print-req-ver.py
