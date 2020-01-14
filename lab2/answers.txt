@@ -1,0 +1,19 @@
+1.
+specifying a socket in python:
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+or with socket.socket... as s
+
+AF_INET speficies ipv4
+SOCK_STREAM specifies TCP
+
+2.
+client and server socket differences:
+a server socket must first bind() to a host and port, then listen() on that host and port for connections and then accept() incoming connections
+
+a client socket connects to a specified host and port (of a server socket that is assumed to be listening for connections)
+
+3.
+s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+
+we turn on the socket option SO_REUSEADDR, which specifies "that the rules used in validating addresses supplied
+in a bind(2) call should allow reuse of local addresses" (from documentation)
