@@ -17,3 +17,10 @@ s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
 we turn on the socket option SO_REUSEADDR, which specifies "that the rules used in validating addresses supplied
 in a bind(2) call should allow reuse of local addresses" (from documentation)
+
+4. 
+we get the host/IP address of the connecting client, and the port number that it is using to connect
+
+5. it returns an empty binary string: b''
+
+6. https://github.com/j-liew/404-labs/tree/master/lab2
