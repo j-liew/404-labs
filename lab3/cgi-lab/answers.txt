@@ -1,0 +1,23 @@
+Q1
+after import os, os.environ contains the environment variables (can be printed)
+
+Q2
+QUERY_STRING
+
+Q3
+HTTP_USER_AGENT
+
+Q4
+the server can retreive the POSTed data by calling cgi.FieldStorage()
+
+Q5
+syntax:
+Set-Cookie: username=USER
+Set-Cookie: password=PASSWORD
+
+Q6
+syntax:
+Cookie: username=USER; password=PASSWORD
+
+Q7
+the browser stores authentication info in the form of cookies and sends that to the server whenever it makes requests so that the user does not have authenticate/log-in for every request
